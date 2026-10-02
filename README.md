@@ -2,6 +2,8 @@
 
 **A little closer to care.** A fast, comforting emergency-aid website built for patients and the people helping them.
 
+**[Open the live website](https://geriayug30-png.github.io/SwiftLink/)**
+
 ## Project Overview
 
 SwiftLink brings three urgent tasks into one simple screen: reaching India's emergency helpline **112**, finding nearby hospitals, and contacting hospitals to check whether the required bed and services are available. The supplied SwiftLink logo is preserved unchanged, with a calming teal-and-navy design.
@@ -87,7 +89,7 @@ All code runs in the browser. No server-side application or login is needed. Ext
 
 ## Screenshots / Demo Information
 
-Open `index.html` for the interactive demo, or use the GitHub Pages address shown in this repository's deployment section once publication completes.
+**Live demo: [geriayug30-png.github.io/SwiftLink](https://geriayug30-png.github.io/SwiftLink/)** — deployed with GitHub Pages. You can also open `index.html` directly.
 
 ![SwiftLink desktop view](screenshots/desktop.jpg)
 
