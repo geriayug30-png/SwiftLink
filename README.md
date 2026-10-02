@@ -87,7 +87,18 @@ All code runs in the browser. No server-side application or login is needed. Ext
 
 ## Screenshots / Demo Information
 
-Open `index.html` for the interactive demo. A hosted link and screenshots will be added when deployment is verified.
+Open `index.html` for the interactive demo, or use the GitHub Pages address shown in this repository's deployment section once publication completes.
+
+![SwiftLink desktop view](screenshots/desktop.jpg)
+
+<details>
+<summary>Mobile screenshot</summary>
+
+![SwiftLink mobile view](screenshots/mobile.jpg)
+
+</details>
+
+Checked on desktop and at a 390px mobile viewport. Live Mumbai hospital results, name and phone filters, empty-result handling, ambulance and bed-enquiry dialogs, and the unmodified logo were verified. No emergency calls were placed during testing.
 
 Suggested walkthrough:
 
@@ -117,4 +128,3 @@ Suggested walkthrough:
 | Bhumika Dubey | Team Member |
 | Yug Geria | Team Member |
 | Jay Dama | Team Member |
-

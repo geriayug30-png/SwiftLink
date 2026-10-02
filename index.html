@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#147e80">
+  <meta name="description" content="SwiftLink helps you find nearby hospitals, contact them about beds, and quickly call India's emergency number 112.">
+  <title>SwiftLink — A little closer to care</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to care options</a>
+  <header class="header wrap">
+    <a href="#" class="brand" aria-label="SwiftLink home"><span class="logo-crop"><img src="assets/swiftlink-logo.png" alt="SwiftLink" width="1024" height="1024"></span></a>
+    <nav aria-label="Main navigation"><a href="#find-care">Find a hospital</a><button class="nav-button" data-open="beds">Check beds</button><a href="#how-it-works">How it works</a></nav>
+    <a class="button emergency small" href="tel:112"><span aria-hidden="true">✆</span> Emergency 112</a>
+  </header>
+  <main id="main">
+    <section class="intro wrap" aria-labelledby="headline">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="cross" aria-hidden="true">+</span> A LITTLE CLOSER TO CARE</p>
+        <h1 id="headline">When it matters,<br><span>find help faster.</span></h1>
+        <p class="lead">A calmer way to find nearby hospitals, ask about beds, and reach emergency help. One simple place.</p>
+        <div class="intro-actions"><a href="#find-care" class="button primary">Find care near me <span aria-hidden="true">⌖</span></a><button class="button secondary" data-open="ambulance">Need an ambulance?</button></div>
+        <p class="micro">No sign-up. No downloads. Just your next step.</p>
+      </div>
+      <aside class="emergency-card" aria-labelledby="emergency-title">
+        <div class="card-top"><span class="round-icon" aria-hidden="true">✆</span><span>INDIA’S EMERGENCY HELPLINE</span></div>
+        <h2 id="emergency-title">Help starts<br>with a call.</h2>
+        <div class="number">112<span>Medical · Police · Fire</span></div>
+        <a class="button call-button" href="tel:112">Call 112 now</a>
+        <p>In an emergency, call directly. Don’t wait for search results.</p>
+        <span class="card-orbit" aria-hidden="true"></span>
+      </aside>
+    </section>
+    <section class="quick-actions wrap" aria-label="Quick care options">
+      <button class="quick-item" data-open="ambulance"><span class="feature-icon coral" aria-hidden="true">✚</span><span><strong>Ambulance support</strong><small>Reach emergency assistance</small></span><span class="plus" aria-hidden="true">+</span></button>
+      <a class="quick-item" href="#find-care"><span class="feature-icon mint" aria-hidden="true">⌖</span><span><strong>Nearby hospitals</strong><small>Find care around you</small></span><span class="plus" aria-hidden="true">+</span></a>
+      <button class="quick-item" data-open="beds"><span class="feature-icon blue" aria-hidden="true">▤</span><span><strong>Bed availability</strong><small>Contact a hospital to confirm</small></span><span class="plus" aria-hidden="true">+</span></button>
+    </section>
+    <section class="finder wrap" id="find-care" aria-labelledby="finder-title">
+      <div class="section-heading"><div><p class="eyebrow">YOUR NEXT STEP</p><h2 id="finder-title">Find the care you need.</h2></div><span class="section-note">A location. A hospital. A helping hand.</span></div>
+      <div class="finder-panel">
+        <div class="location-row">
+          <div class="location-select"><label for="city">Search around a city</label><select id="city"><option value="">Choose city</option><option value="mumbai">Mumbai</option><option value="thane">Thane</option><option value="navimumbai">Navi Mumbai</option><option value="pune">Pune</option><option value="delhi">New Delhi</option><option value="bengaluru">Bengaluru</option><option value="chennai">Chennai</option><option value="hyderabad">Hyderabad</option><option value="kolkata">Kolkata</option><option value="ahmedabad">Ahmedabad</option></select></div>
+          <span class="or">or</span><button class="button primary" id="locate"><span aria-hidden="true">⌖</span> Use my location</button>
+          <div class="radius-select"><label for="radius">Search radius</label><select id="radius"><option value="5000">Within 5 km</option><option value="10000">Within 10 km</option><option value="20000">Within 20 km</option></select></div>
+        </div>
+        <p class="privacy-note">Using your location shares coordinates with OpenStreetMap’s Overpass service to find hospitals. SwiftLink does not save your location.</p>
+        <div class="divider"></div>
+        <div class="results-toolbar"><div class="filters" aria-label="Hospital filters"><button class="filter active" data-filter="all" aria-pressed="true">All hospitals</button><button class="filter" data-filter="emergency" aria-pressed="false">Emergency listed</button><button class="filter" data-filter="phone" aria-pressed="false">Phone available</button></div><label class="sr-only" for="hospital-filter">Filter results by hospital name</label><input type="search" id="hospital-filter" placeholder="Filter by hospital name"></div>
+        <div id="status" class="status" role="status" aria-live="polite">Choose a city or use your location to get started.</div>
+        <div id="results" class="results">
+          <div class="empty-state"><span class="location-emblem" aria-hidden="true">⌖</span><h3>Let’s find care close to you.</h3><p>Choose your location above to see nearby hospitals,<br class="desktop-break"> directions, and ways to contact them.</p><span class="empty-note">You’re in control of your next step.</span></div>
+        </div>
+        <div class="results-foot"><p>Hospital directory: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a>. Details may be incomplete.</p><a id="maps-fallback" href="https://www.google.com/maps/search/hospitals+near+me/" target="_blank" rel="noopener noreferrer">Search in Google Maps</a></div>
+      </div>
+      <div class="bed-notice"><span class="notice-icon" aria-hidden="true">i</span><p><strong>A quick note about beds.</strong> Live bed availability isn’t connected yet. We’ll help you reach the hospital to confirm general, ICU, or emergency beds before travelling.</p><button class="text-button" data-open="beds">What to ask</button></div>
+    </section>
+    <section class="how wrap" id="how-it-works" aria-labelledby="how-title"><div><p class="eyebrow">SIMPLE, WHEN YOU NEED IT</p><h2 id="how-title">Less searching.<br> More clarity.</h2></div><ol><li><span>01</span><div><h3>Find a nearby hospital</h3><p>Choose a city or share your location.</p></div></li><li><span>02</span><div><h3>Confirm the care you need</h3><p>Contact the hospital about beds and services.</p></div></li><li><span>03</span><div><h3>Get directions or call for help</h3><p>Open your route, or call 112 for an emergency.</p></div></li></ol></section>
+    <section class="reassurance wrap"><span class="reassurance-cross" aria-hidden="true">+</span><div><h2>You don’t have to navigate this alone.</h2><p>For urgent help in India, the next step is a call.</p></div><a href="tel:112" class="button secondary">Call emergency 112</a></section>
+  </main>
+  <footer class="wrap"><div><strong>SwiftLink</strong><p>Connecting you to your next step in care.</p></div><p>Built with care by Team SwiftLink.<br><a href="https://112.gov.in/" target="_blank" rel="noopener noreferrer">About India’s 112 service</a></p><p class="footer-note">Hospital finder, not a dispatch or booking service.<br>For an emergency, call 112 directly.</p></footer>
+  <a class="mobile-emergency" href="tel:112">✆ &nbsp; Emergency? Call 112</a>
+  <dialog id="care-dialog" aria-labelledby="dialog-title"><form method="dialog"><button class="close-dialog" aria-label="Close dialog">×</button></form><span class="eyebrow" id="dialog-eyebrow">HERE TO HELP</span><h2 id="dialog-title"></h2><div id="dialog-content"></div></dialog>
+  <noscript><div class="noscript">Enable JavaScript for hospital search. You can still <a href="tel:112">call 112</a> or <a href="https://www.google.com/maps/search/hospitals+near+me/">find hospitals in Google Maps</a>.</div></noscript>
+</body>
+</html>
+
